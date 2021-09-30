@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+
+    <link rel="stylesheet" href="SurveyStyle.css">
+    <script src="SurveyJS.js"></script>
+
+</head>
+<body>
+
+<div id="clock">
+    <h3>Survey closes in <span id="time">05:00</span> minutes!</h3>
+</div>
+
+<div id="top-text">
+
+    <h1>Please consider the following questions and identify your level of agreement with the statement</h1>
+    <p>  5. Strongly agree<br>
+         4. Agree<br>
+         3. Neutral/ Don’t know<br>
+         2. Disagree<br>
+         1. Strongly disagree</p>
+
+</div>
+
+<div id="content">
+    <div id="verification">
+        <table id="part_1">
+            <caption><h3>Section 1: Verification </h3></caption>
+            <form action="">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <td><p class="section1">I and/or my colleagues know where to get information to help us analyse the business case for consciously
+                        attracting people with disabilities as members</p></td>
+                    <td><input type="radio" name="section1q1" class="q1" value="1"></td>
+                    <td><input type="radio" name="section1q1" class="q1" value="2"></td>
+                    <td><input type="radio" name="section1q1" class="q1" value="3"></td>
+                    <td><input type="radio" name="section1q1" class="q1" value="4"></td>
+                    <td><input type="radio" name="section1q1" class="q1" value="5"></td>
+                </tr>
+                <tr>
+                    <td><p class="section1">I/my colleagues have researched the scope for increasing the participation of the broader
+                        community, in particular people with disabilities</p></td>
+                    <td><input type="radio" name="section1q2" class="q1" value="1"></td>
+                    <td><input type="radio" name="section1q2" class="q1" value="2"></td>
+                    <td><input type="radio" name="section1q2" class="q1" value="3"></td>
+                    <td><input type="radio" name="section1q2" class="q1" value="4"></td>
+                    <td><input type="radio" name="section1q2" class="q1" value="5"></td>
+                </tr>
+                <tr>
+                    <td><p class="section1">I know of disability service providers that I could link with in the local community</p></td>
+                    <td><input type="radio" name="section1q3" class="q1" value="1"></td>
+                    <td><input type="radio" name="section1q3" class="q1" value="2"></td>
+                    <td><input type="radio" name="section1q3" class="q1" value="3"></td>
+                    <td><input type="radio" name="section1q3" class="q1" value="4"></td>
+                    <td><input type="radio" name="section1q3" class="q1" value="5"></td>
+                </tr>
+                <tr>
+                    <td><p class="section1">My colleagues and I inclusivize our services to provide for people with disabilities </p></td>
+                    <td><input type="radio" name="section1q4" class="q1" value="1"></td>
+                    <td><input type="radio" name="section1q4" class="q1" value="2"></td>
+                    <td><input type="radio" name="section1q4" class="q1" value="3"></td>
+                    <td><input type="radio" name="section1q4" class="q1" value="4"></td>
+                    <td><input type="radio" name="section1q4" class="q1" value="5"></td>
+                </tr>
+                <button type="button" class="next" onclick="allDone(`verification`,4,document.querySelectorAll('input[type=radio].q1'),this,document.querySelectorAll('p.section1'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="valueProp">
+        <table id="part_2">
+            <caption><h3>Section 2: Value Proposition</h3></caption>
+            <form action="">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <td><p class="section2">My colleagues and I have a significant contribution to make to the quality of life
+                        of people in our community, including people with disabilities</p></td>
+                    <td><input type="radio" name="section2q1" class="q2" value="1"></td>
+                    <td><input type="radio" name="section2q1" class="q2" value="2"></td>
+                    <td><input type="radio" name="section2q1" class="q2" value="3"></td>
+                    <td><input type="radio" name="section2q1" class="q2" value="4"></td>
+                    <td><input type="radio" name="section2q1" class="q2" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td><p class="section2">My colleagues and I have the scope to improve opportunities for participation in fitness activities
+                        for people living in, or visiting our community, including people with disabilities</p></td>
+                    <td><input type="radio" name="section2q2" class="q2" value="1"></td>
+                    <td><input type="radio" name="section2q2" class="q2" value="2"></td>
+                    <td><input type="radio" name="section2q2" class="q2" value="3"></td>
+                    <td><input type="radio" name="section2q2" class="q2" value="4"></td>
+                    <td><input type="radio" name="section2q2" class="q2" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td><p class="section2">The benefits of increasing our UniversAbility  to increase participation are clear</p></td>
+                    <td><input type="radio" name="section2q3" class="q2" value="1"></td>
+                    <td><input type="radio" name="section2q3" class="q2" value="2"></td>
+                    <td><input type="radio" name="section2q3" class="q2" value="3"></td>
+                    <td><input type="radio" name="section2q3" class="q2" value="4"></td>
+                    <td><input type="radio" name="section2q3" class="q2" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td><p class="section2">My colleagues and I play a major role in providing health services to the entire
+                        community, including people with disabilities</p></td>
+                    <td><input type="radio" name="section2q4" class="q2" value="1"></td>
+                    <td><input type="radio" name="section2q4" class="q2" value="2"></td>
+                    <td><input type="radio" name="section2q4" class="q2" value="3"></td>
+                    <td><input type="radio" name="section2q4" class="q2" value="4"></td>
+                    <td><input type="radio" name="section2q4" class="q2" value="5"></td>
+
+                </tr>
+                <tr>
+                    <td><p class="section2">The UniversAbility  of our fitness services increases
+                        the job satisfaction and turnover of my staff </p></td>
+                    <td><input type="radio" name="section2q5" class="q2" value="1"></td>
+                    <td><input type="radio" name="section2q5" class="q2" value="2"></td>
+                    <td><input type="radio" name="section2q5" class="q2" value="3"></td>
+                    <td><input type="radio" name="section2q5" class="q2" value="4"></td>
+                    <td><input type="radio" name="section2q5" class="q2" value="5"></td>
+                </tr>
+                <button type="button" class="next" onclick="allDone(`valueProp`,5,document.querySelectorAll('input[type=radio].q2'),this,document.querySelectorAll('p.section2'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="vision">
+        <table id="part_3">
+            <caption><h3>Section 3: Vision </h3></caption>
+            <form action="">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+                <tr>
+                    <td><p class="section3">I and/or my colleagues know where to get information to help us analyse the business case for consciously
+                        attracting people with disabilities as members</p></td>
+                    <td><input type="radio" name="section3q1" class="q3" value="1"></td>
+                    <td><input type="radio" name="section3q1" class="q3" value="2"></td>
+                    <td><input type="radio" name="section3q1" class="q3" value="3"></td>
+                    <td><input type="radio" name="section3q1" class="q3" value="4"></td>
+                    <td><input type="radio" name="section3q1" class="q3" value="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <p class="section3">Which of the following statements best describes your situation within your organisation (Please select one)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p class="inner-part">I and/or my colleagues have identified set targets for increasing the UniversAbility
+                            of our services and are putting strategies in place to achieve these goals</p>
+                    </td>
+                    <td><input type="radio" name="section3q2" class="q3" value="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p class="inner-part">I and/or my colleagues have identified scope for increasing the UniversAbility  of our services </p>
+                    </td>
+                    <td><input type="radio" name="section3q2" class="q3" value="4"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p class="inner-part">I THINK there may be scope for inclusivizing our services but am not sure </p>
+                    </td>
+                    <td><input type="radio" name="section3q2" class="q3" value="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p class="inner-part">I have never considered inclusivizing our services until now </p>
+                    </td>
+                    <td><input type="radio" name="section3q2" class="q3" value="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p class="inner-part">I don’t think inclusivizing our services, in particular for people with disabilities,
+                            is really an option for us but won’t rule it out completely until it has been fully explored </p>
+                    </td>
+                    <td><input type="radio" name="section3q2" class="q3" value="1"></td>
+                </tr>
+
+                <button type="button" class="next" onclick="allDone(`vision`,2,document.querySelectorAll('input[type=radio].q3'),this,document.querySelectorAll('p.section3'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="philosophy">
+        <table id="part_4">
+            <caption><h3>Section 4: Philosophy </h3></caption>
+            <form action="">
+                <tr>
+                    <td>
+                        <p class="section4">1.Does your organisation have stated ideals in your strategic plan or other
+                            management documents which relate UniversAbility of your services? </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="question4yes4yes">YES</label>
+                        <input type="radio" name="s4" class="question4part2" id="question4yes" value="10" onclick="enableElements(document.querySelectorAll('input[type=checkbox].question4part2:disabled'))">
+
+                        <label for="question4no4no">NO</label>
+                        <input type="radio" name="s4" class="question4part2" id="question4no" value="0" onclick="enableElements(document.querySelectorAll('input[type=checkbox].question4part2:enabled'))">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="section4">2.Do you think an inclusive philosophy is a lived experience by: </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="Management">Management</label>
+                        <input type="checkbox" class="question4part2" id="Management" value="10" disabled>
+
+                        <label for="Staff">Staff</label>
+                        <input type="checkbox" class="question4part2" id="Staff" value="10" disabled>
+
+                        <label for="Customers">Customers</label>
+                        <input type="checkbox" class="question4part2" id="Customers" value="10" disabled>
+                    </td>
+                </tr>
+                <button type="button" class="next" onclick="allDone(`philosophy`,1,document.querySelectorAll('input[type=radio].question4part2'),this,document.querySelectorAll('p.section4'));">Next</button>
+            </form>
+        </table>
+
+    </div>
+    <div hidden id="policy">
+        <table id="part_5">
+            <caption><h3>Section 5: Policy </h3></caption>
+            <form action="">
+            <tr>
+                <td>
+                    <p class="section5">1.Does your charging policy account for the varied needs of your customers? E.g. No charge for personal assistants </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="inner-part">
+                    <label for="section5yes">YES</label>
+                    <input type="radio" name="s5" class="q5" id="section5yes" value="10" onclick="">
+
+                    <label for="section5no">NO</label>
+                    <input type="radio" name="s5" class="q5" id="section5no" value="0" onclick="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="section5">2.Do you track and monitor the proportion of your club members who experience disabilities? </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="inner-part">
+                    <label for="section5p2yes">YES</label>
+                    <input type="radio" name="s5p2" class="q5" id="section5p2yes" value="10">
+
+                    <label for="section5p2no">NO</label>
+                    <input type="radio" name="s5p2" class="q5" id="section5p2no" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="inner-part">3.Have you a budget allocated to: </p>
+                    <p class="section5">(a)	increasing the UniversAbility  of your services? (eg. facilities, equipment and staff training)</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="inner-part">
+                    <label for="section5p3Yes">YES</label>
+                    <input type="radio" name="s5p3a" class="q5" id="section5p3Yes" value="10">
+
+                    <label for="section5p3No">NO</label>
+                    <input type="radio" name="s5p3a" class="q5" id="section5p3No" value="0">
+                    <label for="section5p3NotNeeded"> Not needed because  equipment is already fully accessible</label>
+                    <input type="radio" name="s5p3a" class="q5" id="section5p3NotNeeded" value="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="section5">(b)	increasing the UniversAbility  of your policies? </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="inner-part">
+                    <label for="section5p3Yes">YES</label>
+                    <input type="radio" name="section5p3b" class="q5" id="section5p3Yes" value="10">
+                    <label for="section5p3No">NO</label>
+                    <input type="radio" name="section5p3b" class="q5" id="section5p3No" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td class="section5"><p class="section5">4.	Are you familiar with the national legislation that relates to disability service provision ?</p></td>
+            </tr>
+            <tr>
+                <td class="inner-part">
+                    <label for="section5p4Yes">YES</label>
+                    <input type="radio" name="section5p4" class="q5" id="section5p4Yes" value="10">
+                    <label for="section5p4No">NO</label>
+                    <input type="radio" name="section5p4" class="q5" id="section5p4No" value="0">
+                </td>
+            </tr>
+            <button type="button" class="next" onclick="allDone(`policy`,5,document.querySelectorAll('input[type=radio].q5'),this,document.querySelectorAll('p.section5'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="processes">
+        <table id="part_6">
+            <caption><h3>Section 6 Processes</h3></caption>
+            <form action="">
+                <tr>
+                    <td class="section6"><p>1.	Do you engage with disability groups in your local community?</p></td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section6Yes">YES</label>
+                        <input type="radio" name="s6" class="q6" id="section6Yes" value="10">
+                        <label for="section6No">NO</label>
+                        <input type="radio" name="s6" class="q6" id="section6No" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section6"><p>2.	Have you forged any alliance/partnership with any disability organisation?</p></td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section6p2Yes">YES</label>
+                        <input type="radio" name="s6part2" class="q6" id="section6p2Yes" value="10">
+                        <label for="section6p2No">NO</label>
+                        <input type="radio" name="s6part2" class="q6" id="section6p2No" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section6"><p>3.	Have you or your staff embraced any assistive technologies (E.g. Assist-Mi app)?</p></td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section6p3Yes">YES</label>
+                        <input type="radio" name="s6part3" class="q6" id="section6p3Yes" value="10">
+                        <label for="section6p3No">NO</label>
+                        <input type="radio" name="s6part3" class="q6" id="section6p3No" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section6"><p>4.	Have you or your colleagues undertaken any research on Inclusivizing your service?</p></td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section6p4Yes">YES</label>
+                        <input type="radio" name="s6part4" class="q6" id="section6p4Yes" value="10">
+                        <label for="section6p4No">NO</label>
+                        <input type="radio" name="s6part4" class="q6" id="section6p4No" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section6"><p>5.	Do you encourage your staff to engage in customer satisfaction conversations with different user groups?</p></td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section6p5Yes">YES</label>
+                        <input type="radio" name="s6part5" class="q6" id="section6p5Yes" value="10">
+                        <label for="section6p5No">NO</label>
+                        <input type="radio" name="s6part5" class="q6" id="section6p5No" value="0">
+                    </td>
+                </tr>
+                <button type="button" class="next" onclick="allDone(`processes`,5,document.querySelectorAll('input[type=radio].q6'),this,document.querySelectorAll('p.section6'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="perception">
+        <table id="part_7">
+            <caption><h3>Section 7 Perception </h3></caption>
+            <form action="">
+                <tr>
+                    <td class="section7">
+                        <p>1.Do you gather information from your users on their beliefs about fitness being a fundamental right for all?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section7Yes">YES</label>
+                        <input type="radio" name="s7" class="q7" id="section7Yes" value="10">
+                        <label for="section7No">NO</label>
+                        <input type="radio" name="s7" class="q7" id="section7No" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section7">
+                        <p>2.Do you gather information from people who do NOT use your facility on fitness being a fundamental right for all?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section7p2Yes">YES</label>
+                        <input type="radio" name="s7p2" class="q7" id="section7p2Yes" value="10">
+                        <label for="section7p2No">NO</label>
+                        <input type="radio" name="s7p2" class="q7" id="section7p2No" value="0">
+                    </td>
+                </tr>
+                <button type="button" class="next" onclick="allDone(`perception`,2,document.querySelectorAll('input[type=radio].q7'),this,document.querySelectorAll('p.section7'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="programmes">
+        <table id="part_8">
+            <caption><h3>Section 8 Progammes</h3></caption>
+
+            <form action="">
+                <tr>
+                    <td class="section8">
+                        <p>This section refers to programmes that you deliver, or support delivery of, to consciously inclusivize your services</p>
+                        <p>1.	Do you and your staff provide <strong>programmes specifically</strong> for people with disabilities?</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="inner-part">
+                        <label for="section8Yes">YES</label>
+                        <input type="radio" name="s8" class="q8" id="section8Yes" value="0"
+                        onclick="enableElements(document.querySelectorAll('input[type=checkbox].s8check:disabled'))">
+                        <label for="section8No">NO</label>
+                        <input type="radio" name="s8" class="q8" id="section8No" value="0"
+                        onclick="enableElements(document.querySelectorAll('input[type=checkbox].s8check:enabled , select.section8select:enabled'))">
+                    </td>
+                </tr>
+                <button hidden id="c" type="button" class="next" onclick="">Next</button>
+            </form>
+        </table>
+
+        <table id="part_8_yes">
+            <caption><h3>If Yes please complete the table below</h3></caption>
+
+            <form action="">
+                <tr>
+                    <th rowspan="2">Disability Category</th>
+                    <th rowspan="2">YES</th>
+                    <th>Type (Segregated or integrated)</th>
+                </tr>
+
+                <tr>
+                    <th width="10%"></th>
+                </tr>
+
+                <tr>
+                    <td><p class="inner-part"></p>Physical disabilities</td>
+                    <td class="td-center">
+                        <input type="checkbox" class="s8check" value="10" disabled onclick="toggleTypeSelector(document.getElementById('selector1'))">
+                    </td>
+                    <td class="td-center">
+                        <select name="type" size="2" class="section8select" id="selector1" disabled>
+                            <option value="segregated">Segregated</option>
+                            <option value="integrated">Integrated</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><p></p>Intellectual disabilities </td>
+                    <td class="td-center">
+                        <input type="checkbox" class="s8check" value="10" disabled onclick="toggleTypeSelector(document.getElementById('selector2'))">
+                    </td>
+                    <td class="td-center">
+                        <select name="type" size="2" class="section8select" id="selector2" disabled>
+                            <option value="segregated">Segregated</option>
+                            <option value="integrated">Integrated</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><p></p>Sensory disabilities </td>
+                    <td class="td-center">
+                        <input type="checkbox" class="s8check" value="10" disabled onclick="toggleTypeSelector(document.getElementById('selector3'))">
+                    </td>
+                    <td class="td-center">
+                        <select name="type" size="2" class="section8select" id="selector3" disabled>
+                            <option value="segregated">Segregated</option>
+                            <option value="integrated">Integrated</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><p></p>Mental health difficulties</td>
+                    <td class="td-center">
+                        <input type="checkbox" class="s8check" value="10" disabled onclick="toggleTypeSelector(document.getElementById('selector4'))">
+                    </td>
+                    <td class="td-center">
+                        <select name="type" size="2" class="section8select" id="selector4" disabled>
+                            <option value="segregated">Segregated</option>
+                            <option value="integrated">Integrated</option>
+                        </select>
+                    </td>
+                </tr>
+            </form>
+        </table>
+
+        <table id="part_8_2">
+            <form action="">
+                <tr>
+                    <td class="section8">
+                        <p>2.	Do people with disabilities use the gym, pool, or participate in group activities etc. alongside other members?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="inner-part">
+                        <label for="section8Yes">YES</label>
+                        <input type="radio" name="s8q2" class="q8" id="section8Yes" value="0" onclick="enableElements(document.querySelectorAll('input[type=checkbox].s8q2check:disabled'))">
+                        <label for="section8No">NO</label>
+                        <input type="radio" name="s8q2" class="q8" id="section8No" value="0" onclick="enableElements(document.querySelectorAll('input[type=checkbox].s8q2check:enabled'))">
+                    </td>
+                </tr>
+                <button hidden id="x" type="button" class="next" onclick="">Next</button>
+            </form>
+
+        </table>
+        <caption><h3 style="margin-left: 600px">If Yes please complete the table below</h3></caption>
+
+        <table id="cat-yes">
+            <form action="">
+                <tr>
+                    <th>Disabilty Category</th>
+                    <th colspan="2">YES</th>
+                </tr>
+                <tr>
+                    <td><p></p>Physical disabilities</td>
+                    <td class="td-center"><input type="checkbox" class="s8q2check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p></p>Intellectual disabilities </td>
+                    <td class="td-center"><input type="checkbox" class="s8q2check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p></p>Sensory disabilities </td>
+                    <td class="td-center"><input type="checkbox" class="s8q2check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p></p>Mental health difficulties </td>
+                    <td class="td-center"><input type="checkbox" class="s8q2check" value="10" disabled></td>
+                </tr>
+                <button style="margin-top: 160px; float: left" type="button" class="next" onclick="allDone(`programmes`,2,document.querySelectorAll('input[type=checkbox].s8check, input[type=checkbox].s8q2check, input[type=radio].q8,select,section8select')
+                ,this,document.querySelectorAll('p.section8'), document.querySelectorAll('td,section8'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="people">
+        <table id="p_table" style="margin-left: 240px">
+            <caption><h3>Section 9 People</h3></caption>
+            <form action="">
+                <tr>
+                    <td class="section9">
+                        <p>1.	Have you or any of your staff/volunteers had training that facilitates the inclusion of people with disabilities?</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>a.	Operational (teaching/instructional staff)</td>
+                    <td class="bord"><label for="section9q1Yes">YES</label><input type="radio" name="section9q1" class="s9" id="section9q1Yes" value="10"></td>
+                    <td class="bord"><label for="section9q1No">NO</label><input type="radio" name="section9q1" class="s9" id="section9q1No" value="0"></td>
+                </tr>
+                <tr>
+                    <td>b.	Management </td>
+                    <td class="bord"><label for="section9q1part_b_Y">YES</label><input type="radio" name="section9q1b" class="s9" id="section9q1part_b_Y" value="10"></td>
+                    <td class="bord"><label for="section9q1part_b_N">NO</label><input type="radio" name="section9q1b" class="s9" id="section9q1part_b_N" value="0"></td>
+                </tr>
+                <tr>
+                    <td>c.	Front of house </td>
+                    <td class="bord"><label for="section9q1part_c_Y">YES</label><input type="radio" name="section9q1c" class="s9" id="section9q1part_c_Y" value="10"></td>
+                    <td class="bord"><label for="section9q1part_c_N">NO</label><input type="radio" name="section9q1c" class="s9" id="section9q1part_c_N" value="0"></td>
+                </tr>
+                <tr>
+                    <td>d.	Stakeholders/ contracted staff </td>
+                    <td class="bord"><label for="section9q1part_d_Y">YES</label><input type="radio" name="section9q1d" class="s9" id="section9q1part_d_Y" value="10"></td>
+                    <td class="bord"><label for="section9q1part_d_N">NO</label><input type="radio" name="section9q1d" class="s9" id="section9q1part_d_N" value="0"></td>
+                </tr>
+            </form>
+        </table>
+
+        <table id="ptable_two" style="margin-left: 240px">
+            <form action="">
+                <tr>
+                    <td class="section9">
+                        <p>2.	Are people with disabilities employed by your organisation and/or represented on your steering committee/ management committee/ board of management etc.?</p>
+                    </td>
+                    <td class="bord"><label for="section9q2_Yes">YES</label><input type="radio" name="section9q2" class="s9" id="section9q2_Yes" value="10"></td>
+                    <td class="bord"><label for="section9q2_No">NO</label><input type="radio" name="section9q2" class="s9" id="section9q2_No" value="0"></td>
+                </tr>
+            </form>
+        </table>
+        <table id="ptable_three" style="margin-left: 240px">
+            <form action="">
+                <tr>
+                    <td class="section9">
+                        <p> 3.	Is there a member of staff allocated as a liaison/point person for customers with disabilities? </p>
+                    </td>
+                    <td class="bord"><label for="section9q3_Yes">YES</label><input type="radio" name="section9q3" class="s9" id="section9q3_Yes" value="10"></td>
+                    <td class="bord"><label for="section9q3_No">NO</label><input type="radio" name="section9q3" class="s9" id="section9q3_No" value="0"></td>
+                </tr>
+                <button style="margin-top: 35px; float: left" type="button" class="next" onclick="allDone(`people`,6,document.querySelectorAll('input[type=radio].s9'),this,document.querySelectorAll('p.section9'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="access">
+        <table id="access_one" style="margin-left: 240px">
+            <caption><h3>Section 10 Physical Access/Place</h3></caption>
+            <form action="">
+                <tr>
+                    <td class="section10">
+                        <p>1.	Have you or your colleagues carried out an audit to evaluate the UniversAbility  of your facility</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="less">
+                        <label for="section10_Yes">YES</label>
+                        <input type="radio" name="s10" class="s10" id="section10_Yes" value="10"
+                               onclick="enableElements(document.querySelectorAll('input[type=checkbox].s10check'))"> <!--enable element-->
+                        <label for="section10_No">NO</label>
+                        <input type="radio" name="s10" class="s10" id="section10_No" value="0"
+                               onclick="enableElements(document.querySelectorAll('input[type=checkbox].s10check'))"><!--enable element-->
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <caption><h3 style="margin-left: 150px">2.Does your facility( or the facility you use) consider the following disabilities when evaluating UniversAbility :</h3></caption>
+
+        <table id="access-part-two">
+            <form action="">
+                <tr>
+                    <th>Disabilty Category</th>
+                    <th colspan="2">YES</th>
+                </tr>
+                <tr>
+                    <td><p class="inner-part"></p>Physical disabilities</td>
+                    <td class="td-center"><input type="checkbox" class="section10check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p class="inner-part"></p>Intellectual disabilities </td>
+                    <td class="td-center"><input type="checkbox" class="section10check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p class="inner-part"></p>Sensory disabilities </td>
+                    <td class="td-center"><input type="checkbox" class="section10check" value="10" disabled></td>
+                </tr>
+                <tr>
+                    <td><p class="inner-part"></p>Mental health difficulties </td>
+                    <td class="td-center"><input type="checkbox" class="section10check" value="10" disabled></td>
+                </tr>
+                <button style="margin-top: 160px; float: left" type="button" class="next" onclick="allDone('access',1,document.querySelectorAll('input[type=radio].s10,input[type=checkbox].section10check'),
+                this,document.querySelectorAll('p.section10'));">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div hidden id="promotion">
+        <table id="part_11">
+            <caption><h3>Section 11: Promotion </h3></caption>
+            <form action="">
+                <tr>
+                    <td class="section11">
+                        <p>1.Is your promotional material inclusive of people with disabilities?</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="less">
+                        <label for="section11_Yes">YES</label>
+                        <input type="radio" name="s11" class="s11" id="section11_Yes" value="10">
+                        <label for="section11_No">NO</label>
+                        <input type="radio" name="s11" class="s11" id="section11_No" value="0">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="section11">
+                        <p>2.Have you or your colleagues/staff developed any promotional materials with the aim of attracting people with disabilities? </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="less">
+                        <label for="section11q2_Yes">YES</label>
+                        <input type="radio" name="s11q2" class="s11" id="section11q2_Yes" value="10">
+                        <label for="section11q2_No">NO</label>
+                        <input type="radio" name="s11q2" class="s11" id="section11q2_No" value="0">
+                    </td>
+                </tr>
+                <button type="button" class="next" onclick="allDone('promotion',2,document.querySelectorAll('input[type=radio].s11'),
+                this,document.querySelectorAll('p.section11'))">Next</button>
+            </form>
+        </table>
+    </div>
+
+    <div id="processBtn">
+        <div class="btn">
+            <button type="button" id="process-button" onclick="loadSummary()"><a href="SurveySummary.html">Review summary</a></button>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SurveyStyle.css">
+    <script src="SurveyJS.js"></script>
+
+    <title>Process</title>
+</head>
+<body>
+
+<div id="finalSummary">
+
+    <h3>Verification</h3>
+<div id="one" style="color: antiquewhite"></div>
+    <h3>Value</h3>
+<div id="two" style="color: antiquewhite"></div>
+    <h3>Vision</h3>
+<div id="three" style="color: antiquewhite"></div>
+    <h3>Philosophy</h3>
+<div id="four" style="color: antiquewhite"></div>
+    <h3>Policy</h3>
+<div id="five" style="color: antiquewhite"></div>
+    <h3>Processes</h3>
+<div id="six" style="color: antiquewhite"></div>
+    <h3>Perception</h3>
+<div id="seven" style="color: antiquewhite"></div>
+    <h3>Programmes</h3>
+<div id="eight" style="color: antiquewhite"></div>
+    <h3>People</h3>
+<div id="nine" style="color: antiquewhite"></div>
+    <h3>Access</h3>
+<div id="ten" style="color: antiquewhite"></div>
+    <h3>Promotion</h3>
+<div id="eleven" style="color: antiquewhite"></div>
+    <h3>Based on your score final summary is :</h3>
+<div id="twelve" style="color: antiquewhite"></div>
+
+</div>
+
+<!--example of the lisBox https://www.aspsnippets.com/Articles/Move-Selected-Items-to-Top-of-ListBox-using-JavaScript.aspx-->
+
+
+<select id="lstFruits" multiple="multiple" style="height: 95px" onclick="MoveToTop(this)">
+    <option value="1">Mango</option>
+    <option value="2">Apple</option>
+    <option value="3">Banana</option>
+    <option value="4">Pineapple</option>
+    <option value="5">Orange</option>
+    <option value="6">Lemon</option>
+    <option value="7">Guava</option>
+</select>
+
+<script>
+    window.onload = getLocalStorage();
+
+    function MoveToTop(lst) {
+        var selected = new Array();
+        var options = lst.getElementsByTagName("OPTION");
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].selected) {
+                selected.push(options[i]);
+                lst.removeChild(options[i]);
+            }
+        }
+        for (var i = 0; i < selected.length; i++) {
+            lst.insertBefore(selected[i], options[0]);
+        }
+    };
+
+</script>
+
+
+</body>
+</html>

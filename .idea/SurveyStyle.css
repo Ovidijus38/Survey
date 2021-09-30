@@ -1,0 +1,111 @@
+body{
+    background-image: url("blue-wallpaper.jpg");
+}
+#finalSummary{
+    background-image: url("blue-wallpaper.jpg");
+}
+
+/* this link explains about box shadows
+https://codepen.io/savnac/pen/pQzzOw*/
+
+#top-text{
+    color: aliceblue;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    border-radius: 4px;
+    box-shadow:0 1px 0 #444,
+    0 2px 0 #373737,
+    0 3px 0 #555,
+    0 4px 0 #474747, 0 5px 0 #666,
+    0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+table{
+    width: 70%;
+
+}
+
+.next
+{
+    margin-left: 200px;
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: #e5c732;
+    border-radius: 4px;
+    box-shadow:0 1px 0 #444,
+    0 2px 0 #373737,
+    0 3px 0 #555,
+    0 4px 0 #474747,
+    0 5px 0 #666,
+    0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+#part_1,#part_2,#part_8_2,#p_table,#part_11{
+    display: inline-table;
+}
+
+#part_3{
+    display: inline-table;
+}
+#part_4{
+    display: inline-table;
+}
+#part_5{
+    display: inline-table;
+}
+#part_6{
+    display: inline-table;
+}
+#part_7{
+    display: inline-table;
+}
+#part_8{
+    display: inline-table;
+}
+
+
+p{
+    font-style: italic;
+}
+
+h3{
+    font-family:'Courier New';
+    color: aliceblue;
+}
+#clock{
+    border-style: double;
+    border-color: aliceblue;
+    width: 22%;
+    float: right;
+    position: sticky;
+    top: 0;
+}
+#clock h3{
+    padding: 5px;
+    margin: auto;
+    color: red;
+}
+#x,#c{
+    visibility: hidden;
+}
+#cat-yes,#part_8_yes{
+margin-left: 240px;
+}
